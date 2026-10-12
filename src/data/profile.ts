@@ -52,7 +52,7 @@ const EMAIL = 'renatojuyjr@gmail.com'
 export const profile: Profile = {
   name: 'Renato J. Uy Jr.',
   firstName: 'Renato',
-  handle: 'Philippiness',
+  handle: 'Philippines',
   role: 'Virtual & Executive Assistant',
   avatarSrc: '/avatar.png',
   aboutPortraitSrc: '/about-photo.png',
