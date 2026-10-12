@@ -50,7 +50,7 @@ export type Profile = {
 const EMAIL = 'renatojuyjr@gmail.com'
 
 export const profile: Profile = {
-  name: 'Renato J. Uy Jr.',
+  name: 'Renato J. Uy Jrr.',
   firstName: 'Renato',
   handle: 'Philippines',
   role: 'Virtual & Executive Assistant',
