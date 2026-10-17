@@ -17,7 +17,7 @@ export const showcasePage = {
   eyebrow: 'Showcase / Sample work',
   titleThin: 'A closer look.',
   titleBold: 'At the work.',
-  lede: 'Explore sample work across calendars, inboxes, project boards, travel, data, and creative support. Choose a room to look around.',
+  lede: 'Explore sample work across calendars, inboxes, project boards, travel, data, and creative support. Select a sample below to see the details.',
 }
 
 /** Use actual sample files. Tool screenshots stay intact; document captures become readable HTML. */

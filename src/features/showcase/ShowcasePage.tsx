@@ -65,7 +65,7 @@ export function ShowcasePage({ page, nested = false }: { page: PageRoute; nested
       >
         <div className="showcase-rooms__pin">
         <div className="showcase-roomnav">
-          <p className="eyebrow">Choose a room</p>
+          <p className="eyebrow">Explore my work</p>
           <SectionHeading id="showcase-rooms-title">The work, in focus.</SectionHeading>
           <nav aria-label="Showcase rooms"><ol>{showcaseRooms.map((room, index) => {
             const Icon = roomIcons[index] ?? ImageSquare
