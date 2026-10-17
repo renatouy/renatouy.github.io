@@ -73,3 +73,119 @@
   .showcase-room:not([hidden]) { animation: none; }
   .showcase-roomnav button { transition: none; }
 }
+/* The wrapper holds the navigation and preview together. */
+.showcase-rooms {
+  display: block;
+}
+
+.showcase-rooms__pin {
+  display: grid;
+  grid-template-columns: 205px minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(24px, 3vw, 44px);
+}
+
+@media (max-width: 1100px) {
+  .showcase-rooms__pin {
+    display: block;
+  }
+}
+
+/* Desktop: hold the preview while scrolling walks through the rooms. */
+@media (min-width: 1101px) and (min-height: 640px)
+  and (prefers-reduced-motion: no-preference) {
+  .showcase-rooms {
+    height: calc(100svh + (var(--room-count) - 1) * 55svh);
+  }
+
+  .showcase-rooms__pin {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+    padding-block: 24px;
+    align-items: center;
+  }
+
+  .showcase-roomnav {
+    position: relative;
+    top: auto;
+    padding-left: 12px;
+    margin-bottom: 0;
+  }
+
+  .showcase-roomnav::before,
+  .showcase-roomnav::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    pointer-events: none;
+  }
+
+  .showcase-roomnav::before {
+    background: var(--line);
+  }
+
+  .showcase-roomnav::after {
+    background: var(--accent);
+    transform: scaleY(var(--room-progress, 0));
+    transform-origin: top;
+  }
+
+  .showcase-roomnav button {
+    min-height: 48px;
+    padding-block: 8px;
+  }
+
+  .showcase-roomnav :is(h2, h3) {
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+
+  .showcase-position {
+    margin-top: 16px;
+    padding-top: 14px;
+  }
+
+  .showcase-image img,
+  .showcase-video {
+    height: clamp(150px, 26svh, 300px);
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+
+  .showcase-empty {
+    min-height: 0;
+    height: clamp(150px, 26svh, 300px);
+    aspect-ratio: auto;
+    padding: 24px;
+  }
+
+  .showcase-empty .showcase-empty__title {
+    font-size: 26px;
+  }
+
+  .showcase-document {
+    height: clamp(150px, 26svh, 300px);
+  }
+
+  .showcase-room figcaption {
+    padding-top: 16px;
+  }
+
+  .showcase-room figcaption :is(h3, h4) {
+    margin-block: 8px;
+    font-size: 24px;
+  }
+
+  .showcase-room figcaption > p:not(.eyebrow) {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .showcase-room figcaption .tag-list {
+    margin-block: 12px;
+  }
+}

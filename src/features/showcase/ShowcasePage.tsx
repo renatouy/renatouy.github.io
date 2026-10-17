@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type CSSProperties } from 'react'
+import { useShowcaseScroll } from './use-showcase-scroll'
 import { Link } from 'react-router'
 import { ArrowUpRight, CalendarBlank, Kanban, Tray, Airplane, Table, ImageSquare, FilmStrip, MagnifyingGlassPlus, X } from '@phosphor-icons/react'
 import { PageMeta } from '@/app/PageMeta'
@@ -26,6 +27,12 @@ export function ShowcasePage({ page, nested = false }: { page: PageRoute; nested
   const SectionHeading = nested ? 'h3' : 'h2'
   const RoomHeading = nested ? 'h4' : 'h3'
   const [selected, setSelected] = useState(0)
+    const roomsRef = useRef<HTMLElement>(null)
+  const jumpToRoom = useShowcaseScroll(
+    roomsRef,
+    showcaseRooms.length,
+    setSelected,
+  )
   const [zoomed, setZoomed] = useState<ImageSample | null>(null)
   const dialogRef = useRef<HTMLDialogElement>(null)
   const current = showcaseRooms[selected]!
@@ -50,13 +57,19 @@ export function ShowcasePage({ page, nested = false }: { page: PageRoute; nested
         <div className="showcase-intro"><Link className="text-link" to="/projects">Explore the case studies <ArrowUpRight size={17} aria-hidden="true" /></Link><p>Simulated portfolio work. New samples are added as they are ready.</p></div>
       </PageHeader>
 
-      <section className="showcase-rooms" aria-labelledby="showcase-rooms-title">
+            <section
+        ref={roomsRef}
+        className="showcase-rooms"
+        aria-labelledby="showcase-rooms-title"
+        style={{ '--room-count': showcaseRooms.length } as CSSProperties}
+      >
+        <div className="showcase-rooms__pin">
         <div className="showcase-roomnav">
           <p className="eyebrow">Choose a room</p>
           <SectionHeading id="showcase-rooms-title">The work, in focus.</SectionHeading>
           <nav aria-label="Showcase rooms"><ol>{showcaseRooms.map((room, index) => {
             const Icon = roomIcons[index] ?? ImageSquare
-            return <li key={room.id}><button type="button" id={`room-choice-${room.id}`} aria-controls={`showcase-room-${room.id}`} aria-pressed={selected === index} onClick={() => setSelected(index)}><span className="showcase-roomnav__number">{pad(index + 1)}</span><Icon size={19} weight={selected === index ? 'fill' : 'regular'} aria-hidden="true" /><span>{room.label}<small>{room.media ? 'Sample ready' : 'Coming next'}</small></span></button></li>
+            return <li key={room.id}><button type="button" id={`room-choice-${room.id}`} aria-controls={`showcase-room-${room.id}`} aria-pressed={selected === index} onClick={() => jumpToRoom(index)}><span className="showcase-roomnav__number">{pad(index + 1)}</span><Icon size={19} weight={selected === index ? 'fill' : 'regular'} aria-hidden="true" /><span>{room.label}<small>{room.media ? 'Sample ready' : 'Coming next'}</small></span></button></li>
           })}</ol></nav>
           <p className="showcase-position" role="status">{pad(selected + 1)} / {pad(showcaseRooms.length)}<span>{current.label}</span></p>
         </div>
@@ -73,6 +86,7 @@ export function ShowcasePage({ page, nested = false }: { page: PageRoute; nested
               </figure>
             </section>
           ))}
+        </div>
         </div>
       </section>
 
