@@ -52,7 +52,6 @@ export const showcaseRooms: ShowcaseRoom[] = [
     title: 'The details, before departure.',
     description: 'This room will show a travel plan with an itinerary, bookings, timing, and practical details for the trip.',
     focus: ['Itinerary planning', 'Travel coordination', 'Contingency planning'],
-    project: { id: 'project-05', label: 'View the travel project plan' },
   },
   {
     id: 'data-entry', label: 'Data entry',
