@@ -14,7 +14,19 @@ export const workflow = [
 
 /** These are real work-history figures from V1, separate from simulated project samples. */
 export const proofPoints = [
-  { value: '5+', label: 'years in admin support', detail: 'Part-time admin work since 2021' },
-  { value: '200+', label: 'CRM records prepared', detail: 'Salesforce data support at Quanta' },
-  { value: '9+', label: 'quarters of on-time reports', detail: 'Financial and membership reporting' },
+  {
+    value: '100%',
+    label: 'reports submitted on time',
+    detail: 'Financial and membership reports for 9+ consecutive quarters.',
+  },
+  {
+    value: '200+',
+    label: 'Salesforce-ready records',
+    detail: 'Cleaned and standardized, with no revisions required.',
+  },
+  {
+    value: '5+',
+    label: 'years of administrative support',
+    detail: 'Scheduling, records, and recurring reporting since 2021.',
+  },
 ]
