@@ -1,0 +1,46 @@
+/* Shared social links: precise brand glyphs, quiet borders, and consistent click targets. */
+.social-keys {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-key {
+  --brand: var(--accent-ink);
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink-2);
+  transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease;
+}
+
+.social-key[data-icon='linkedin'] { --brand: var(--brand-linkedin); }
+.social-key[data-icon='facebook'] { --brand: var(--brand-facebook); }
+
+.social-key > svg { display: block; flex: none; }
+
+.social-key:is(:hover, :focus-visible) {
+  color: var(--brand);
+  border-color: var(--brand);
+  background: var(--surface);
+}
+
+.social-key:focus-visible {
+  outline: 2px solid var(--accent-ink);
+  outline-offset: 3px;
+}
+
+.social-key:active { background: var(--accent-soft); }
+
+@media (prefers-reduced-motion: reduce) {
+  .social-key { transition: none; }
+}

@@ -1,59 +1,37 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <!-- viewport-fit=cover: without it every env(safe-area-inset-*) the phone
-         shell pads with is 0. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-
-    <!-- SEO. Add the canonical URL and share image once the site is deployed. -->
-    <title>Renato J. Uy Jr. - Virtual & Executive Assistant</title>
-    <meta name="description" content="Virtual and executive assistant in the Philippines. Inbox and calendar management, lead generation, CRM data support and AI-assisted workflows for founders and small teams." />
-    <meta name="author" content="Renato J. Uy Jr." />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
-    <!-- The browser bar takes the page colour (--cream per theme); the inline
-         theme script below and lib/theme.ts keep it in step with the toggle.
-         Literal hex here only because this runs before any stylesheet loads. -->
-    <meta name="theme-color" content="#F4F4ED" />
-    <!-- <link rel="canonical" href="https://yoursite.com/" /> -->
-
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <meta name="referrer" content="strict-origin-when-cross-origin" />
-
-    <!-- The rail avatar is above the fold on every desktop route. Keep this in
-         sync with profile.avatarSrc in src/data/profile.ts. -->
-    <link rel="preload" as="image" href="/avatar.svg" fetchpriority="high" media="(min-width: 1100px)" />
-
-    <!-- Open Graph / social share. og:image must be an absolute URL once you deploy. -->
+    <title data-static-meta>Renato J. Uy Jr. | Administrative & Executive Assistant</title>
+    <meta data-static-meta name="description" content="Administrative and executive support for organized schedules, clear priorities, accurate records, and dependable follow-through. Explore Renato Uy's work." />
+    <link rel="icon" href="/brand/ru.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preload" href="/fonts/geist-var.woff2" as="font" type="font/woff2" crossorigin />
+    <meta name="theme-color" content="#0A0A0A" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Renato J. Uy Jr." />
-    <meta property="og:title" content="Renato J. Uy Jr. - Virtual & Executive Assistant" />
-    <meta property="og:description" content="Virtual and executive assistant in the Philippines. Inbox and calendar management, lead generation, CRM data support and AI-assisted workflows for founders and small teams." />
-    <!-- <meta property="og:url" content="https://yoursite.com/" /> -->
-    <!-- <meta property="og:image" content="https://yoursite.com/share.png" /> -->
+    <meta property="og:site_name" content="Renato Uy | Administrative & Executive Assistant" />
+    <meta property="og:url" content="https://renatouy.github.io/" />
+    <meta property="og:title" content="Support you can rely on. | Renato Uy" />
+    <meta property="og:description" content="Organized schedules. Clear priorities. Careful follow-through. Explore my administrative and executive assistant work samples." />
+    <meta property="og:image" content="https://renatouy.github.io/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Renato Uy, Administrative and Executive Assistant. Support you can rely on." />
     <meta name="twitter:card" content="summary_large_image" />
-
-    <!-- Theme before first paint: no flash of the wrong palette. Default is
-         light; dark is the visitor's opt-in, persisted in localStorage. -->
+    <meta name="twitter:image" content="https://renatouy.github.io/og-image.png" />
     <script>
-      (function () {
-        try {
-          document.documentElement.dataset.theme =
-            localStorage.getItem('theme') === 'dark' ? 'dark' : 'light';
-        } catch (e) {
-          document.documentElement.dataset.theme = 'light';
+      try {
+        if (localStorage.getItem('pv2-theme') === 'light') {
+          document.documentElement.dataset.theme = 'light'
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#F0F8FF')
         }
-        if (document.documentElement.dataset.theme === 'dark') {
-          var bar = document.querySelector('meta[name="theme-color"]');
-          if (bar) bar.setAttribute('content', '#070B14');
-        }
-      })();
+      } catch (e) {}
     </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>This portfolio needs JavaScript. For administrative or executive support, email renatojuyjr@gmail.com.</noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -1,0 +1,78 @@
+import type { Project } from './schema'
+
+/** The agreed five-project roadmap. Status describes the sample, not real client results. */
+export const projects: Project[] = [
+  {
+    id: 'project-01', number: '01', shortTitle: 'A week with room to focus.',
+    title: 'Executive Calendar & Meeting Coordination', category: 'Scheduling & executive support', status: 'Complete',
+    summary: 'A coordinated executive week with clear priorities, protected focus time, and thoughtful replies to scheduling changes.',
+    challenge: 'An executive’s week included an urgent client renewal, operational reviews, interviews, a vendor demonstration, and a Friday report. The schedule needed to fit those commitments while keeping lunch and focused work time free.',
+    actions: ['Placed the urgent client renewal within the client’s available window.', 'Moved the vendor demonstration to avoid a conflict with the financial review.', 'Kept the Wednesday hiring interview at 2–3 PM and arranged the other candidate interview for Thursday.', 'Protected a 90-minute focus block, lunch breaks, and time to prepare the Friday report.', 'Prepared a weekly briefing, two reply drafts, and a summary explaining the scheduling decisions.'],
+    outcome: 'A complete Monday-to-Friday calendar and four supporting documents that make the schedule, priorities, and pending confirmations easy to review.',
+    tools: ['Google Calendar', 'Gmail', 'Google Docs'], skills: ['Calendar management', 'Conflict resolution', 'Prioritization', 'Professional communication'],
+    cover: '/projects/project-01/calendar.png',
+    deliverables: [
+      { id: 'calendar', label: 'Executive calendar', description: 'The organized week of October 12–16, 2026. Times are shown in the original calendar time zone.', src: '/projects/project-01/calendar.png', type: 'image' },
+      { id: 'briefing', label: 'Weekly executive briefing', description: 'A readable document covering key appointments, priorities, scheduling updates, and executive action items.', src: '/projects/project-01/weekly-briefing.html', type: 'document' },
+      { id: 'vendor', label: 'Vendor email draft', description: 'A readable draft proposing an alternative time around an existing commitment.', src: '/projects/project-01/vendor-email.html', type: 'document' },
+      { id: 'candidate', label: 'Candidate email draft', description: 'A readable rescheduling draft that leaves confirmation with the candidate.', src: '/projects/project-01/candidate-email.html', type: 'document' },
+      { id: 'decisions', label: 'Scheduling decision summary', description: 'A structured explanation of the scheduling decisions, priorities, and protected time.', src: '/projects/project-01/scheduling-summary.html', type: 'document' },
+    ],
+    note: 'Simulated Executive Assistant work sample. The calendar uses the original tool screenshot. The briefing, emails, and decision summary are formatted as readable documents. Drafts are examples, not sent messages.',
+  },
+  {
+    id: 'project-02', number: '02', shortTitle: 'Ten emails. A clear next step.',
+    title: 'Executive Inbox Management & Communication Support', category: 'Inbox & communication', status: 'Complete',
+    summary: 'Ten incoming emails sorted by urgency, with reply drafts, follow-up dates, and a daily briefing for the executive.',
+    challenge: 'The inbox contained a contract renewal due at noon, an operations report, interview feedback, a discount request, and several less urgent tasks. The executive needed a clear view of what required a decision and what could wait.',
+    actions: ['Classified all ten emails by deadline, urgency, and required action.', 'Kept renewal, payment, and discount decisions subject to executive approval.', 'Prepared replies for the contract renewal, meeting request, and invoice follow-up.', 'Recorded owners, deadlines, follow-up dates, and draft status in a separate tracker.', 'Summarized immediate decisions, overdue items, and upcoming follow-ups in a daily briefing.'],
+    outcome: 'Ten emails organized, three replies prepared for review, and a clear record of the decisions and follow-ups still outstanding. Drafted replies remain unsent.',
+    tools: ['Gmail', 'Google Sheets', 'Google Docs'], skills: ['Inbox triage', 'Decision support', 'Follow-up tracking', 'Business writing'],
+    cover: '/projects/project-02/inbox-cover.svg',
+    deliverables: [
+      { id: 'inbox', label: 'Inbox priority tracker', description: 'All ten emails, priorities, deadlines, and required actions.', src: '/projects/project-02/inbox-tracker.html', type: 'document' },
+      { id: 'replies', label: 'Three email drafts', description: 'Replies to the renewal, meeting, and invoice requests, ready for executive review.', src: '/projects/project-02/email-drafts.html', type: 'document' },
+      { id: 'followups', label: 'Follow-up & action tracker', description: 'Owners, follow-up dates, and pending decisions. Drafted does not mean sent.', src: '/projects/project-02/follow-up-actions.html', type: 'document' },
+      { id: 'daily', label: 'Daily executive inbox summary', description: 'A 3 PM briefing with overdue requests clearly called out.', src: '/projects/project-02/daily-summary.html', type: 'document' },
+      { id: 'decisions', label: 'Prioritization decision summary', description: 'Why each request received its priority, including approval boundaries.', src: '/projects/project-02/prioritization-summary.html', type: 'document' },
+    ],
+    note: 'Simulated work sample dated October 19, 2026. Portfolio editions of the practice deliverables, with personal identifiers replaced by role labels.',
+  },
+  {
+    id: 'project-03', number: '03', shortTitle: 'Cleaner records. Clearer follow-ups.',
+    title: 'CRM Data Cleanup & Lead Tracking', category: 'CRM & data accuracy', status: 'In progress',
+    summary: 'A practice CRM cleanup focused on duplicates, consistent contact fields, and a documented record of fixes.',
+    challenge: 'Contact records needed review before they could support reliable tracking and follow-up.',
+    actions: ['Completed the Cleaned Contacts and Issue Log sheets in the practice workbook.', 'Reviewed duplicates and inconsistent fields and documented the fixes.'],
+    outcome: 'Cleaned Contacts and Issue Log work is complete. The follow-up tracker, executive summary, and cleaning decision summary are the next steps before the final handoff.',
+    tools: ['CRM', 'Spreadsheets'], skills: ['Data cleanup', 'Duplicate review', 'Issue logging', 'Record accuracy'],
+    cover: '/projects/roadmap/crm.svg', deliverables: [],
+    plannedDeliverables: ['Cleaned Contacts', 'Issue Log', 'Follow-up Tracker', 'Executive Summary', 'Cleaning Decision Summary'],
+    note: 'Practice project in progress. Final screenshots and deliverables will be added after verification.',
+  },
+  {
+    id: 'project-04', number: '04', shortTitle: 'From a meeting to action.',
+    title: 'Meeting Minutes & Action Tracking', category: 'Documentation & coordination', status: 'Planned',
+    summary: 'A planned sample showing how meeting discussions become clear decisions, owners, and next steps.',
+    challenge: 'The planned exercise will turn meeting notes into an organized record people can act on.',
+    actions: [], outcome: 'This project is planned. Completed work will be published here when the exercise is finished.',
+    tools: ['Google Docs', 'Google Sheets'], skills: ['Meeting minutes', 'Action tracking', 'Documentation'],
+    cover: '/projects/roadmap/meeting.svg', deliverables: [],
+    plannedDeliverables: ['Meeting agenda', 'Meeting minutes', 'Action tracker', 'Follow-up email'],
+    note: 'Planned portfolio sample. No completed deliverables are claimed.',
+  },
+  {
+    id: 'project-05', number: '05', shortTitle: 'Every detail, before departure.',
+    title: 'Business Travel & Itinerary Planning', category: 'Administrative operations', status: 'Planned',
+    summary: 'A planned travel coordination sample covering an itinerary, practical details, and contingency planning.',
+    challenge: 'The planned exercise will organize a business trip into a usable schedule with the important details close at hand.',
+    actions: [], outcome: 'This project is planned. The finished itinerary and supporting documents will be added after the exercise.',
+    tools: ['Google Docs', 'Google Sheets', 'Google Calendar'], skills: ['Travel research', 'Itinerary planning', 'Attention to detail'],
+    cover: '/projects/roadmap/travel.svg', deliverables: [],
+    plannedDeliverables: ['Travel options', 'Business itinerary', 'Budget tracker', 'Travel brief and contingency notes'],
+    note: 'Planned portfolio sample. No travel bookings or completed client work are claimed.',
+  },
+]
+
+export const completedProjects = projects.filter((project) => project.status === 'Complete')
+export const findProject = (id?: string) => projects.find((project) => project.id === id)

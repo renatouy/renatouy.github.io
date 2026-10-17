@@ -1,0 +1,7 @@
+import { site, socials, credentials } from '@/content/site'
+import type { Faq } from '@/content/schema'
+export const absoluteUrl = (path: string) => /^https?:\/\//.test(path) ? path : `${site.url}${path.startsWith('/') ? path : `/${path}`}`
+export const routeUrl = (path: string) => `${site.url}/#${path}`
+const serialize = (value: object) => JSON.stringify(value).replace(/</g, '\\u003c')
+export const personJsonLd = () => serialize({ '@context': 'https://schema.org', '@type': 'Person', name: site.name, url: `${site.url}/`, jobTitle: site.role, image: absoluteUrl(site.avatar.src), email: site.email, address: { '@type': 'PostalAddress', addressLocality: 'Cagayan de Oro', addressCountry: 'PH' }, sameAs: socials.filter((social) => social.external).map((social) => social.href), hasCredential: credentials.map((credential) => ({ '@type': 'EducationalOccupationalCredential', name: credential.title, recognizedBy: { '@type': 'Organization', name: credential.issuer } })) })
+export const contactJsonLd = ({ path, title, description, faq }: { path: string; title: string; description: string; faq: Faq[] }) => serialize({ '@context': 'https://schema.org', '@graph': [{ '@type': 'ContactPage', name: title, description, url: routeUrl(path), about: { '@type': 'Person', name: site.name, email: site.email } }, { '@type': 'FAQPage', mainEntity: faq.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) }] })
