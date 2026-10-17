@@ -2,7 +2,7 @@ import type { Credential, SocialLink } from './schema'
 
 /** Identity, links and portraits migrated from V1. */
 export const site = {
-  name: 'Renato J. Uy Jr.',
+  name: 'Renato Uy Jr.',
   brand: 'Renato Uy',
   logo: { light: '/brand/ru.png', dark: '/brand/ru.png', headerLight: '/brand/ru.png', headerDark: '/brand/ru.png' },
   url: 'https://renatouy.github.io',
@@ -12,7 +12,7 @@ export const site = {
   replyPromise: 'Tell me where you need support.',
   location: 'Cagayan de Oro, Philippines',
   countryCode: 'PH',
-  avatar: { src: '/avatar.png', alt: 'Renato J. Uy Jr.', width: 883, height: 1178 },
+  avatar: { src: '/avatar.png', alt: 'Renato Uy Jr.', width: 883, height: 1178 },
   avatarSmall: '/avatar.png',
   aboutPortrait: { src: '/about-photo.png', alt: 'Renato wearing a formal suit', width: 1122, height: 1402 },
 } as const
