@@ -5,6 +5,7 @@ import { MobileNav } from '@/components/drawer/MobileNav'
 import { SearchPalette } from '@/components/search/SearchPalette'
 import { SignalFlowBackground } from '@/components/background/SignalFlowBackground'
 import { SiteFooter } from '@/components/page/SiteFooter'
+import { BackToTop } from '@/components/navigation/BackToTop'
 import { DESKTOP_QUERY, useMediaQuery } from '@/hooks/use-media-query'
 import { useHashLanding } from '@/hooks/use-hash-landing'
 import { ShellProvider, useShell } from './shell-context'
@@ -50,6 +51,7 @@ function Shell() {
           <SiteFooter />
         </div>
       </main>
+            <BackToTop />
       <SearchPalette />
       <ScrollRestoration />
     </div>
