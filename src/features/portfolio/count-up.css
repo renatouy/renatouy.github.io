@@ -1,0 +1,15 @@
+.proof-strip .count-up {
+  display: inline-grid;
+  font-variant-numeric: tabular-nums;
+}
+
+.proof-strip .count-up__sizer,
+.proof-strip .count-up__number {
+  grid-area: 1 / 1;
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+.proof-strip .count-up__sizer {
+  visibility: hidden;
+}

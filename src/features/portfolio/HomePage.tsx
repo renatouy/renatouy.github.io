@@ -2,6 +2,7 @@ import { ClipboardText, ListChecks, Tray, Target } from '@phosphor-icons/react'
 import { PageMeta } from '@/app/PageMeta'
 import { pages, type PageRoute } from '@/app/routes'
 import { proofPoints, workflow } from '@/content/home'
+import { CountUp } from './CountUp'
 import { personJsonLd } from '@/lib/seo'
 import { HeroSection } from '@/features/home/hero/HeroSection'
 import { ShowcasePage } from '@/features/showcase/ShowcasePage'
@@ -28,7 +29,7 @@ export function HomePage({ page }: { page: PageRoute }) {
       <section id="top" className="home-intro" aria-labelledby="hero-title">
         <HeroSection />
         <section className="proof-strip section-wrap" aria-label="Highlights from real work experience">
-          {proofPoints.map((point) => <div key={point.label}><strong>{point.value}</strong><span>{point.label}<small>{point.detail}</small></span></div>)}
+          {proofPoints.map((point) => <div key={point.label}><CountUp value={point.value} /><span>{point.label}<small>{point.detail}</small></span></div>)}
         </section>
         <section className="section-wrap workflow-section" aria-labelledby="workflow-title">
           <header className="section-heading"><div><p className="eyebrow">How I work</p><h2 id="workflow-title">You set the direction.<br /><strong>I keep things moving.</strong></h2></div><p>Clear priorities. Careful work.<br />Follow-through you can see.</p></header>
