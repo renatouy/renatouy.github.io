@@ -553,13 +553,7 @@
     transition-duration: 1ms;
   }
 }
-/* Remove the two dividers above Home when collapsed */
+/* Hide only the extra divider when collapsed */
 .sb-panel[data-collapsed='true'] .sb-body > .sb-sep {
   visibility: hidden;
-}
-
-.sb-panel[data-collapsed='true']
-  .sb-list > .sb-group:first-of-type
-  > .sb-group__label::after {
-  opacity: 0;
 }
