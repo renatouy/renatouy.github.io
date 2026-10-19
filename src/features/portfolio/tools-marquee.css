@@ -35,7 +35,7 @@
 .tools-marquee__track {
   display: flex;
   width: max-content;
-  animation: tools-marquee-scroll 145s linear infinite;
+  animation: tools-marquee-scroll 120s linear infinite;
 }
 
 /* Each complete set has its own trailing spacing, so the -50% loop has no jump. */

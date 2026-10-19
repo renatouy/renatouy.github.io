@@ -94,7 +94,7 @@ function setupTestimonials(root) {
     timer = setTimeout(() => {
       show((current + 1) % slides.length);
       syncAuto();
-    }, 5000);
+    }, 4000);
   }
 
   root.addEventListener("click", (event) => {
@@ -114,7 +114,7 @@ function setupTestimonials(root) {
       ) return;
 
       show(next);
-      paused = true;
+      paused = false;
       updatePauseButton();
       syncAuto();
       return;
