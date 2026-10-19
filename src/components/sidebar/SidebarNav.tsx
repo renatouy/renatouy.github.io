@@ -86,7 +86,6 @@ export function SidebarNav({ collapsed, onNavigate, onHoverChange }: Props) {
     const icon = (
       <span className="sb-item__icon">
         <Icon size={20} weight={lit ? 'fill' : 'regular'} aria-hidden />
-        {entry.kind === 'page' && entry.badge ? <span className="sb-dot" aria-hidden /> : null}
       </span>
     )
 
@@ -105,11 +104,6 @@ export function SidebarNav({ collapsed, onNavigate, onHoverChange }: Props) {
       <>
         {icon}
         <span className="sb-item__label sb-fade">{entry.label}</span>
-        {entry.badge ? (
-          <span className="sb-badge sb-fade" aria-label={`${entry.badge} projects, including planned work`}>
-            {entry.badge}
-          </span>
-        ) : null}
       </>
     )
 

@@ -38,65 +38,143 @@
   font-weight: 300;
 }
 
-/* ---------- The answers: one open at a time (details name="contact-faq") ---------- */
-
-.ct-acc {
-  margin-top: 24px;
-  border-top: 1px solid var(--line-strong);
-}
-.ct-acc > details {
-  border-bottom: 1px solid var(--line-strong);
-}
-.ct-acc summary {
+/* FAQ cards */
+.faq-list {
   display: grid;
-  grid-template-columns: 30px minmax(0, 1fr) 16px;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.faq-item {
+  min-width: 0;
+  background: #fff;
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+}
+
+.faq-question {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 22px;
   align-items: center;
-  gap: 8px;
-  min-height: 44px;
-  padding: 13px 0;
-  font-size: 15px;
+  gap: 16px;
+  width: 100%;
+  min-height: 60px;
+  padding: 18px;
+  border: 0;
+  border-radius: 15px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: var(--reading-control, 13px);
   font-weight: 600;
-  letter-spacing: -0.01em;
-  list-style: none;
+  line-height: 1.5;
+  text-align: left;
   cursor: pointer;
 }
-.ct-acc summary::-webkit-details-marker {
-  display: none;
+
+.faq-question:focus-visible {
+  outline: 3px solid var(--accent, #2d78c2);
+  outline-offset: 4px;
 }
-.ct-acc summary:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-  border-radius: 4px;
+
+/* Exactly 22px, with two centered 10px × 2px bars */
+.faq-icon {
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--surface-3);
+  color: var(--ink);
+
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
 }
-.ct-acc summary > svg {
-  color: var(--ink-3);
-  transition: transform var(--dur-fast) var(--ease-spring);
+
+.faq-icon::before,
+.faq-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 2px;
+  margin-top: -1px;
+  margin-left: -5px;
+  border-radius: 2px;
+  background: currentColor;
+  transform-origin: center;
 }
-.ct-acc details[open] summary > svg {
-  transform: rotate(180deg);
+
+.faq-icon::after {
+  transform: rotate(90deg) scaleX(1);
+  opacity: 1;
+
+  /* Fallback easing, followed by the requested spring */
+  transition:
+    transform 600ms cubic-bezier(.34, 1.56, .64, 1),
+    opacity 600ms ease;
+  transition-timing-function:
+    linear(
+      0,
+      0.457 16.7%,
+      0.876 33.3%,
+      1.008 50%,
+      1.02 61.1%,
+      1
+    );
 }
-.ct-idx {
-  color: var(--accent-ink);
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
+
+.faq-item[data-open="true"] .faq-icon {
+  background: var(--accent, #2d78c2);
+  color: #fff;
 }
-.ct-acc details > p {
-  margin: 0;
-  padding: 0 24px 18px 38px;
-  color: var(--ink-2);
-  font-size: 14.5px;
-  line-height: 1.6;
+
+.faq-item[data-open="true"] .faq-icon::after {
+  transform: rotate(0deg) scaleX(.2);
+  opacity: 0;
 }
-@keyframes ct-rise {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
+
+@media (hover: hover) {
+  .faq-item[data-open="false"] .faq-question:hover .faq-icon {
+    transform: scale(1.1);
   }
 }
-@media (prefers-reduced-motion: no-preference) {
-  .ct-acc details[open] > p {
-    animation: ct-rise var(--dur-fast) var(--ease-spring) both;
+
+/* Animate the grid track instead of height */
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition:
+    grid-template-rows 520ms cubic-bezier(.32, .72, 0, 1);
+}
+
+.faq-item[data-open="true"] .faq-answer {
+  grid-template-rows: 1fr;
+}
+
+.faq-answer__inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.faq-answer__inner > p {
+  margin: 0;
+  padding: 0 18px 18px;
+  color: #475569;
+  color: var(--ink-2);
+  line-height: 1.7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-icon,
+  .faq-icon::before,
+  .faq-icon::after,
+  .faq-answer {
+    transition: none;
   }
 }
 

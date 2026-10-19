@@ -1,0 +1,208 @@
+:root {
+  --reading-body: 0.9375rem;      /* 15px */
+  --reading-control: 0.8125rem;   /* 13px */
+  --reading-small: 0.75rem;       /* 12px */
+  --reading-label: 0.6875rem;     /* 11px */
+}
+
+body {
+  font-size: var(--reading-body);
+  line-height: 1.7;
+}
+
+/* Main descriptions and lists. */
+.app .app-main :is(p, li):not(
+  .eyebrow,
+  .pg-eyebrow,
+  .pg-mono,
+  .hero__eyebrow,
+  .hero__sub,
+  .pg-lede,
+  .about-lead,
+  .showcase-empty__title
+) {
+  font-size: var(--reading-body);
+  line-height: 1.7;
+}
+
+/* Opening descriptions. */
+.app .app-main :is(
+  .hero__sub,
+  .pg-lede,
+  .project-detail__head > p
+) {
+  font-size: clamp(1rem, 1.3vw, 1.125rem);
+  line-height: 1.7;
+}
+
+/* Section labels. */
+.app .app-main :is(
+  .eyebrow,
+  .pg-eyebrow,
+  .pg-mono,
+  .hero__eyebrow
+) {
+  font-size: var(--reading-label);
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+}
+
+/* Supporting information throughout the portfolio. */
+.app .app-main small,
+.app .app-main :is(
+  .project-card__meta,
+  .project-card__foot > span:first-child,
+  .project-status,
+  .section-note,
+  .sample-note,
+  .experience-period,
+  .experience-metric span,
+  .experience-card__number,
+  .about-location > span,
+  .about-portrait figcaption span,
+  .credential-grid p,
+  .workflow__top > span,
+  .value-list > div > span,
+  .service-number,
+  .working-together li > span,
+  .project-planned li > span,
+  .next-project > span,
+  .projects-toolbar > p,
+  .projects-filters span,
+  .deliverables__header > span,
+  .deliverables__list button > span:first-child,
+  .deliverable-image > span,
+  .showcase-intro p,
+  .showcase-roomnav__number,
+  .showcase-position,
+  .showcase-frame__bar > span,
+  .showcase-image__hint,
+  .sample-lightbox__bar,
+  .ct-field > span,
+  .ct-idx,
+  .ct-hint,
+  .ct-err,
+  .site-foot p
+) {
+  font-size: var(--reading-small);
+  line-height: 1.5;
+}
+
+/* Buttons, links, and tool names. */
+.app .app-main :is(
+  button,
+  .text-link,
+  .button,
+  .btn-line,
+  .pg-btn,
+  .ct-mail,
+  .tools-marquee__label
+) {
+  font-size: var(--reading-control);
+  line-height: 1.5;
+}
+
+/* Skill and tool tags. */
+.app .app-main :is(
+  .tag-list li,
+  .tool-row li
+) {
+  font-size: var(--reading-small);
+  line-height: 1.5;
+}
+
+/* Smaller content headings. */
+.app .app-main :is(
+  .workflow h3,
+  .value-list h3,
+  .value-list h4,
+  .credential-grid h2,
+  .credential-grid h3,
+  .working-together li h3,
+  .working-together li h4,
+  .deliverables__caption h3
+) {
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+
+/* Highlight labels, without resizing the animated numbers. */
+.app .app-main .proof-strip > div > span {
+  min-width: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.app .app-main .proof-strip small {
+  max-width: 30ch;
+  font-size: var(--reading-small);
+  line-height: 1.6;
+}
+
+/* Profile and navigation, including the mobile drawer. */
+.app .sb-profile__name {
+  font-size: 1.125rem;
+}
+
+.app .sb-profile__role {
+  max-width: 224px;
+  font-size: var(--reading-small);
+  line-height: 1.45;
+  white-space: normal;
+  text-wrap: balance;
+}
+
+.app .sb-item {
+  font-size: 1rem;
+}
+
+.app .sb-group__label {
+  font-size: var(--reading-label);
+}
+
+.app .mb-bar__title {
+  font-size: 1.0625rem;
+}
+
+.app .about-portrait strong {
+  font-size: 1.125rem;
+}
+
+/* Contact fields. */
+.app .app-main :is(input, textarea) {
+  font-size: var(--reading-body);
+  line-height: 1.5;
+}
+
+/* Search panel. */
+.app .search__field input {
+  font-size: var(--reading-body);
+}
+
+.app .search__label {
+  font-size: 1rem;
+}
+
+.app .search__desc {
+  font-size: var(--reading-small);
+}
+
+.app .search__field kbd {
+  font-size: var(--reading-label);
+}
+
+/* Allow the tools heading and its control to wrap. */
+.app .tools-marquee__heading {
+  flex-wrap: wrap;
+  row-gap: 12px;
+}
+
+/* Keep a long Showcase menu accessible within its sticky stage. */
+@media (min-width: 1101px) and (min-height: 640px)
+  and (prefers-reduced-motion: no-preference) {
+  .app .showcase-roomnav {
+    max-height: calc(100svh - 48px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+  }
+}

@@ -6,6 +6,7 @@ import { CountUp } from './CountUp'
 import { personJsonLd } from '@/lib/seo'
 import { HeroSection } from '@/features/home/hero/HeroSection'
 import { ShowcasePage } from '@/features/showcase/ShowcasePage'
+import { Testimonials } from '@/features/testimonials/Testimonials'
 import { ContactSection } from '@/features/contact/ContactPage'
 import { ProjectsPage } from './ProjectsPage'
 import { AboutPage, ExperiencePage, ServicesPage } from './Pages'
@@ -40,6 +41,7 @@ export function HomePage({ page }: { page: PageRoute }) {
         </section>
       </section>
       {sections.map(({ id, Component }) => <Component key={id} page={pages.find((entry) => entry.id === id)!} nested />)}
+      <Testimonials />
       <ContactSection />
     </div>
   )
