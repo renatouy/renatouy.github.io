@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" rx="20" fill="#f5f9ff"/>
+  <path d="M20 0h1160a20 20 0 0 1 20 20v66H0V20A20 20 0 0 1 20 0Z" fill="#173f66"/>
+  <g font-family="Arial">
+    <text font-family="Arial" x="45" y="53" fill="#fff" font-size="23" font-weight="700">PROJECT 05 / ADMINISTRATIVE OPERATIONS</text>
+    <text font-family="Arial" x="45" y="145" fill="#173f66" font-size="34" font-weight="700">Files in order. Next steps in view.</text>
+    <text font-family="Arial" x="45" y="185" fill="#637b91" font-size="19">8 sample files · 5 folders · 6 recurring admin tasks</text>
+
+    <rect x="35" y="225" width="1130" height="371" rx="10" fill="#fff" stroke="#dce6f2"/>
+    <path d="M45 225h1110a10 10 0 0 1 10 10v47H35v-47a10 10 0 0 1 10-10Z" fill="#eaf2fc"/>
+
+    <g fill="#567085" font-size="15" font-weight="700">
+      <text font-family="Arial" x="58" y="260">RECORD</text>
+      <text font-family="Arial" x="165" y="260">DOCUMENT</text>
+      <text font-family="Arial" x="730" y="260">OWNER</text>
+      <text font-family="Arial" x="908" y="260">STATUS</text>
+    </g>
+
+    <path d="M35 282h1130M35 360h1130M35 438h1130M35 516h1130" stroke="#e2eaf2"/>
+
+    <g fill="#74899d" font-size="17">
+      <text font-family="Arial" x="58" y="329">DOC-02</text>
+      <text font-family="Arial" x="58" y="407">DOC-03</text>
+      <text font-family="Arial" x="58" y="485">DOC-05</text>
+      <text font-family="Arial" x="58" y="563">DOC-06</text>
+    </g>
+
+    <g fill="#17324d" font-size="22">
+      <text font-family="Arial" x="165" y="329">October admin request log</text>
+      <text font-family="Arial" x="165" y="407">Supplier invoice NS-1048</text>
+      <text font-family="Arial" x="165" y="485">Office stock check / Version 02</text>
+      <text font-family="Arial" x="165" y="563">Restock request</text>
+    </g>
+
+    <g fill="#405e7c" font-size="20">
+      <text font-family="Arial" x="730" y="329">Renato</text>
+      <text font-family="Arial" x="730" y="407">Noel</text>
+      <text font-family="Arial" x="730" y="485">Renato</text>
+      <text font-family="Arial" x="730" y="563">Renato</text>
+    </g>
+
+    <rect x="875" y="303" width="245" height="36" rx="18" fill="#eaf3ff"/>
+    <rect x="875" y="381" width="245" height="36" rx="18" fill="#fff3dd"/>
+    <rect x="875" y="459" width="245" height="36" rx="18" fill="#eaf3ff"/>
+    <rect x="875" y="537" width="245" height="36" rx="18" fill="#fff3dd"/>
+
+    <g font-size="16" font-weight="700">
+      <text font-family="Arial" text-anchor="middle" x="998" y="327" fill="#215d94">CURRENT</text>
+      <text font-family="Arial" text-anchor="middle" x="998" y="405" fill="#85551f">AWAITING APPROVAL</text>
+      <text font-family="Arial" text-anchor="middle" x="998" y="483" fill="#215d94">CURRENT</text>
+      <text font-family="Arial" text-anchor="middle" x="998" y="561" fill="#85551f">AWAITING APPROVAL</text>
+    </g>
+
+    <text font-family="Arial" x="45" y="653" fill="#637b91" font-size="16">RECORDS REGISTER PREVIEW / 4 OF 8 FILES / SIMULATED WORK SAMPLE</text>
+  </g>
+</svg>

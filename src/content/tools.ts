@@ -10,6 +10,7 @@ export const tools = {
   trello: { name: 'Trello', logo: '/icons/verified/trello.svg' },
   clickup: { name: 'ClickUp', logo: '/icons/verified/clickup.svg' },
   salesforce: { name: 'Salesforce', logo: '/icons/verified/salesforce.svg' },
+  hubspot: { name: 'HubSpot', logo: '/icons/verified/hubspot.svg' },
   claude: { name: 'Claude', logo: '/icons/verified/claude.png' },
   chatgpt: { name: 'ChatGPT', logo: '/icons/verified/chatgpt.svg' },
   zapier: { name: 'Zapier', logo: '/icons/verified/zapier.svg' },

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" rx="20" fill="#f5f9ff"/>
+  <path d="M20 0h1160a20 20 0 0 1 20 20v66H0V20A20 20 0 0 1 20 0Z" fill="#173f66"/>
+  <g font-family="Arial">
+    <text font-family="Arial" x="45" y="53" fill="#fff" font-size="23" font-weight="700">PROJECT 04 / MEETING MINUTES &amp; ACTION TRACKING</text>
+    <text font-family="Arial" x="45" y="145" fill="#173f66" font-size="34" font-weight="700">From a meeting to clear next steps.</text>
+    <text font-family="Arial" x="45" y="185" fill="#637b91" font-size="19">6 assigned actions · 3 recorded decisions · Follow-up email draft</text>
+
+    <rect x="35" y="225" width="1130" height="371" rx="10" fill="#fff" stroke="#dce6f2"/>
+    <path d="M45 225h1110a10 10 0 0 1 10 10v47H35v-47a10 10 0 0 1 10-10Z" fill="#eaf2fc"/>
+
+    <g fill="#567085" font-size="15" font-weight="700">
+      <text font-family="Arial" x="58" y="260">ID</text>
+      <text font-family="Arial" x="115" y="260">ACTION</text>
+      <text font-family="Arial" x="760" y="260">OWNER</text>
+      <text font-family="Arial" x="920" y="260">DUE / PHT</text>
+    </g>
+
+    <path d="M35 282h1130M35 360h1130M35 438h1130M35 516h1130" stroke="#e2eaf2"/>
+
+    <g fill="#74899d" font-size="17">
+      <text font-family="Arial" x="58" y="329">A01</text>
+      <text font-family="Arial" x="58" y="407">A02</text>
+      <text font-family="Arial" x="58" y="485">A03</text>
+      <text font-family="Arial" x="58" y="563">A04</text>
+    </g>
+
+    <g fill="#17324d" font-size="22">
+      <text font-family="Arial" x="115" y="329">Confirm client contacts and folder access</text>
+      <text font-family="Arial" x="115" y="407">Provide the missing cost figures</text>
+      <text font-family="Arial" x="115" y="485">Prepare the report draft for review</text>
+      <text font-family="Arial" x="115" y="563">Review the report before the client send</text>
+    </g>
+
+    <g fill="#405e7c" font-size="20">
+      <text font-family="Arial" x="760" y="329">Mika</text>
+      <text font-family="Arial" x="760" y="407">Noel</text>
+      <text font-family="Arial" x="760" y="485">Dana</text>
+      <text font-family="Arial" x="760" y="563">Alex</text>
+    </g>
+
+    <g fill="#647a8f" font-size="19">
+      <text font-family="Arial" x="920" y="329">Oct 21 / 3 PM</text>
+      <text font-family="Arial" x="920" y="407">Oct 22 / Noon</text>
+      <text font-family="Arial" x="920" y="485">Oct 22 / 4 PM</text>
+      <text font-family="Arial" x="920" y="563">Oct 23 / 10 AM</text>
+    </g>
+
+    <text font-family="Arial" x="45" y="653" fill="#637b91" font-size="16">ACTION TRACKER PREVIEW / 4 OF 6 ACTIONS / SIMULATED WORK SAMPLE</text>
+  </g>
+</svg>

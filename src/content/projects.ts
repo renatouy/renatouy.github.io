@@ -81,7 +81,7 @@ export const projects: Project[] = [
     outcome: 'Five documents ready to review, with six actions and three decisions recorded. The report still needs approval, and the follow-up email remains a draft.',
     tools: ['Google Docs', 'Google Sheets'],
     skills: ['Meeting preparation', 'Meeting minutes', 'Action tracking', 'Follow-up writing'],
-    cover: '/projects/project-04/cover.svg',
+    cover: '/projects/project-04/meeting-cover.svg',
     deliverables: [
       { id: 'agenda', label: 'Meeting agenda', description: 'A 30-minute plan with topics, timings, and the details to have ready.', src: '/projects/project-04/meeting-agenda.html', type: 'document' },
       { id: 'minutes', label: 'Meeting minutes', description: 'The discussion, three decisions, six actions, and items still open.', src: '/projects/project-04/meeting-minutes.html', type: 'document' },
@@ -106,7 +106,7 @@ export const projects: Project[] = [
     outcome: 'Five portfolio documents and eight linked sample files ready to review. Pending approvals, a draft report, and the next checks remain clearly listed.',
     tools: ['Google Drive', 'Google Docs', 'Google Sheets'],
     skills: ['File organization', 'Records management', 'Process writing', 'Recurring task tracking'],
-    cover: '/projects/project-05/cover.svg',
+    cover: '/projects/project-05/admin-cover.svg',
     deliverables: [
       { id: 'folders', label: 'Shared-folder & file naming guide', description: 'Where each file belongs and how to name current and archived versions.', src: '/projects/project-05/folder-guide.html', type: 'document' },
       { id: 'records', label: 'Administrative records register', description: 'Eight linked sample files with owners, status, access guidance, and notes.', src: '/projects/project-05/records-register.html', type: 'document' },

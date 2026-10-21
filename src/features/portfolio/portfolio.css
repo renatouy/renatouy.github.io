@@ -212,9 +212,31 @@
 .experience-card__head .eyebrow { font-size: 9px; }
 .experience-card__head :is(h2,h3) { font-size: clamp(19px,2vw,26px); line-height: 1.2; font-weight: 550; letter-spacing: -.025em; margin-top: 10px; }
 .experience-period { margin-top: 9px; font-size: 11px; color: var(--ink-3); }
-.experience-metric { margin-left: auto; flex: none; width: 130px; padding-left: 20px; border-left: 1px solid var(--line-strong); }
-.experience-metric strong { font-size: 40px; font-weight: 500; letter-spacing: -.06em; line-height: 1; color: var(--accent-ink); }
-.experience-metric span { display: block; margin-top: 7px; font-size: 9px; color: var(--ink-2); line-height: 1.5; }
+.experience-metric {
+  margin-left: auto;
+  flex: none;
+  width: 160px;
+  padding-left: 22px;
+  border-left: 1px solid var(--line-strong);
+}
+
+.experience-metric strong {
+  display: block;
+  font-size: 44px;
+  font-weight: 600;
+  letter-spacing: -.045em;
+  line-height: 1;
+  color: var(--accent-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.experience-metric span {
+  display: block;
+  margin-top: 9px;
+  font-size: 11px;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
 .experience-card__summary { margin-top: 25px; font-size: 13px; color: var(--ink-2); max-width: 75ch; line-height: 1.8; }
 .experience-card details { margin-top: 25px; border-top: 1px solid var(--line); }
 .experience-card summary { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-top: 16px; font-size: 11px; color: var(--accent-ink); cursor: pointer; list-style: none; }

@@ -20,17 +20,26 @@ export function HeroSection() {
       </h1>
       <div className="hero__foot">
         <p className="hero__sub">{homeHero.subhead}</p>
-        <div className="hero__actions">
-          <Link to="/#projects" className="hero__cta btn-line" onClick={(event) => {
-            if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
-            event.preventDefault()
-            scrollToSection('projects')
-          }}>Explore my projects <ArrowUpRight size={16} weight="bold" aria-hidden="true" /></Link>
-          <Link to="/#contact" className="hero__cta text-link" onClick={(event) => {
-            if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
-            event.preventDefault()
-            scrollToSection('contact')
-          }}>Let’s talk <ArrowUpRight size={16} aria-hidden="true" /></Link>
+              <div className="hero__actions">
+          <Link
+            to="/#projects"
+            className="hero__cta btn-line"
+            onClick={(event) => {
+              if (
+                event.button !== 0 ||
+                event.metaKey ||
+                event.ctrlKey ||
+                event.shiftKey ||
+                event.altKey
+              ) return
+
+              event.preventDefault()
+              scrollToSection('projects')
+            }}
+          >
+            Explore my projects
+            <ArrowUpRight size={16} weight="bold" aria-hidden="true" />
+          </Link>
         </div>
       </div>
     </section>

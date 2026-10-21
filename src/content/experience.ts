@@ -48,7 +48,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     outcome: 'Maintained 100% on-time submission of financial and membership reports for 9+ consecutive quarters.',
     skills: ['Calendar management', 'Inbox coordination', 'Records', 'Reporting', 'Discretion'],
     flow: ['Coordinate', 'Document', 'Report'],
-    metric: { value: '9+', label: 'consecutive quarters of on-time reporting' },
+      metric: { value: '100%', label: 'on-time reports across 9+ quarters' },
   },
   {
     id: 'salesforce-readiness',
@@ -68,7 +68,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     outcome: 'Submitted import-ready data with no revisions required after submission.',
     skills: ['Salesforce', 'Data cleaning', 'Spreadsheets', 'Lead research', 'Accuracy'],
     flow: ['Collect', 'Standardize', 'Prepare'],
-    metric: { value: '200+', label: 'CRM records prepared' },
+      metric: { value: '200+', label: 'CRM records cleaned and prepared' },
   },
   {
     id: 'research-tracking',
@@ -88,7 +88,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     outcome: 'Contributed organized prospect records and research findings to support outreach and product decisions.',
     skills: ['Lead generation', 'Google Sheets', 'Google Drive', 'Competitor research', 'Coordination'],
     flow: ['Research', 'Qualify', 'Track'],
-    metric: { value: '150+', label: 'qualified leads researched' },
+      metric: { value: '150+', label: 'prospects researched and qualified' },
   },
   {
     id: 'quality-workflows',
@@ -108,7 +108,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     outcome: 'Reduced labeling errors by 20% while maintaining reliable quality and deadline performance.',
     skills: ['Quality assurance', 'Documentation', 'Attention to detail', 'Workflow improvement'],
     flow: ['Review', 'Correct', 'Verify'],
-    metric: { value: '95%+', label: 'task accuracy' },
+    metric: { value: '96%', label: 'task accuracy' },
   },
   {
     id: 'multilingual-operations',
@@ -125,9 +125,9 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Reviewed AI-translated course modules for content accuracy and formatting consistency.',
       'Maintained organized project documentation in shared Google Drive folders.',
     ],
-    outcome: 'Supported multilingual releases with cleaner content and easier-to-find project documentation.',
+     outcome: 'Helped bring in an instructor with over one million Udemy students for a possible course translation project. Also reviewed course materials and kept project documents organized.',
     skills: ['Content QA', 'Research', 'Google Drive', 'File organization', 'Localization support'],
     flow: ['Research', 'Review', 'Organize'],
-    metric: { value: '5', label: 'languages supported' },
+      metric: { value: '1M+', label: 'Udemy students of an instructor I helped bring in' },
   },
 ]

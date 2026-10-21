@@ -44,7 +44,7 @@
   flex: none;
   align-items: center;
   gap: 44px;
-  padding: 28px 44px 28px 0;
+  padding: 28px 16px 28px 0;
 }
 
 .tools-marquee__item {
@@ -60,7 +60,6 @@
 }
 
 .tools-marquee__item:first-child { margin-left: 28px; }
-.tools-marquee__item:last-child { padding-right: 0; border-right: 0; }
 .tools-marquee__label { font-size: 14px; font-weight: 550; }
 .tools-marquee:is(:hover, :focus-within) .tools-marquee__track,
 .tools-marquee[data-paused='true'] .tools-marquee__track { animation-play-state: paused; }
@@ -72,7 +71,7 @@
 
 @media (max-width: 760px) {
   .tools-marquee__heading { align-items: baseline; gap: 12px; }
-  .tools-marquee__set { gap: 28px; padding-block: 23px; padding-right: 28px; }
+  .tools-marquee__set { gap: 28px; padding-block: 23px; padding-right: 6px; }
   .tools-marquee__item { gap: 11px; padding-right: 28px; }
   .tools-marquee__item:first-child { margin-left: 22px; }
   .tools-marquee__label { font-size: 13px; }
