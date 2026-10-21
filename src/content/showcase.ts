@@ -58,7 +58,7 @@ export const showcaseRooms: ShowcaseRoom[] = [
     title: 'Clean records. Useful information.',
     description: 'This room will show organized records, consistent fields, and a clear handoff in a spreadsheet or CRM.',
     focus: ['Data accuracy', 'Record organization', 'Quality checks'],
-    project: { id: 'project-03', label: 'See the CRM project progress' },
+    project: { id: 'project-03', label: 'See the completed CRM project' },
   },
   {
     id: 'graphic-design', label: 'Graphic design',

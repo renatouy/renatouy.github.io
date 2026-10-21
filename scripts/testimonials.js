@@ -94,7 +94,7 @@ function setupTestimonials(root) {
     timer = setTimeout(() => {
       show((current + 1) % slides.length);
       syncAuto();
-    }, 4000);
+    }, 5000);
   }
 
   root.addEventListener("click", (event) => {

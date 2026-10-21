@@ -16,21 +16,21 @@ export const testimonials: {
   items: [
     {
       id: 'testimonial-01',
-      quote: 'Add an approved quote about a task, how Renato handled it, and what changed as a result.',
-      name: 'Name pending',
-      role: 'Role or working relationship',
+      quote: "Ren was my first VA, and he was great to work with. He asks the right questions, makes sure he understands the task, and gets things done right. I'd recommend him again and again.",
+      name: 'Avinash J.',
+      role: '',
     },
     {
       id: 'testimonial-02',
-      quote: 'A second approved quote can describe communication, reliability, or support with a recurring responsibility.',
-      name: 'Name pending',
-      role: 'Role or working relationship',
+      quote: "Ren does great work and always delivers on time. His reports are clear, and he's really easy to work with.",
+      name: 'Joseph C.',
+      role: '',
     },
     {
       id: 'testimonial-03',
-      quote: 'Use this space for a specific example of working together. A clear detail will say more than a general compliment.',
-      name: 'Name pending',
-      role: 'Role or working relationship',
+      quote: "I had the chance to work with Ren as his QM. He pays close attention to detail and has been a great help to the team.",
+      name: 'Avelino M.',
+      role: '',
     },
   ],
 }

@@ -1,0 +1,13 @@
+﻿Practice Source ID,Contact,Email,Quality Flag,Next Follow-up
+CRM-005,Ella Navarro,ella.navarro@example.com,Needs Review - Overdue Follow-up,2026-10-18
+CRM-009,Isabel Dela Cruz,,Needs Review - Missing Email,2026-10-26
+CRM-016,Olivia Chua,olivia.chua@example.com,Needs Review - Unclear Lead Status,2026-10-20
+CRM-018,Quinn Ocampo,,Needs Review - Invalid Email,2026-10-23
+CRM-020,Sam Villanueva,,Needs Review - Email Conflict,2026-10-21
+CRM-022,Ulysses Serrano,ulysses.serrano@example.com,Needs Review - Overdue Follow-up,2026-10-14
+CRM-023,Vera Salazar,vera.salazar@example.com,Needs Review - Date Conflict,2026-10-16
+CRM-026,Yuri Valdez,yuri.valdez@example.com,Needs Review - Unclear Lead Status,2026-10-23
+CRM-030,Ravi Aquino,,Needs Review - Invalid Email,2026-10-29
+CRM-031,Sofia Del Rosario,sofia.delrosario@example.com,Needs Review - Missing Owner,2026-10-21
+CRM-034,Uma Ramos,uma.ramos@example.com,Needs Review - Overdue Follow-up,2026-10-17
+CRM-035,Vince Soriano,vince.soriano@example.com,Needs Review - Unclear Lead Status,2026-10-26

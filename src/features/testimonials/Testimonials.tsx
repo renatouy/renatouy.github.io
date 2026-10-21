@@ -83,7 +83,7 @@ export function Testimonials() {
 
                   <span className="testimonials__person">
                     <strong>{item.name}</strong>
-                    <span>{item.role}</span>
+                                        {item.role && <span>{item.role}</span>}
                   </span>
                 </figcaption>
               </figure>
