@@ -28,7 +28,7 @@ export const showcaseRooms: ShowcaseRoom[] = [
     description: 'An executive week with client meetings, interviews, a vendor demonstration, and protected focus time. Open the screenshot to inspect the schedule.',
     focus: ['Meeting coordination', 'Conflict resolution', 'Protected focus time'],
     media: {
-      type: 'image', src: '/projects/project-01/calendar.png', title: 'Weekly executive calendar',
+      type: 'image', src: '/showcase/calendar/executive-week.png', title: 'Weekly executive calendar',
       alt: 'Simulated executive calendar for October 12–16, 2026, with meetings, interviews, lunch breaks, and focus time.',
       width: 1671, height: 941,
     },
